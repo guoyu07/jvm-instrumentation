@@ -24,23 +24,23 @@ public class InstrTest {
 	}
 
 	@Test
-	public void agentSlowWithPerformanceAnnotation() throws IOException {
+	public void agentSlowWithAnnotation() throws IOException {
 		System.out.println("agentSlowTestWithPerformanceAnnotation");
-		new URL("http://localhost:4567/param/Joe").openStream();;
+		new URL("http://localhost:4567/param/Joe").openStream();
 
 		assertTrue(true);
 	}
 
 	@Test
-	public void agentFastWithPerformanceAnnotation() throws IOException {
+	public void agentFastWithAnnotation() throws IOException {
 		System.out.println("agentSlowTestWithPerformanceAnnotation");
-		new URL("http://localhost:4567/param/fastparam").openStream();;
+		new URL("http://localhost:4567/param/fastparam").openStream();
 
 		assertTrue(true);
 	}
 
 	@Test
-	public void agentTestWithoutPerformanceAnnotation() throws IOException {
+	public void agentWithoutAnnotation() throws IOException {
 		System.out.println("agentTestWithoutPerformanceAnnotation");
 		new URL("http://localhost:4567/hello").openStream();
 

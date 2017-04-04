@@ -20,7 +20,6 @@ public class App {
 
 	@PerformanceAudit
 	public static Object getJoe(Request req, Response res) throws InterruptedException {
-		System.out.println("getJoe method");
 		String name = req.params(":name");
 		if (Objects.equals(name, "Joe")) {
             Thread.sleep(1000);
