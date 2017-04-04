@@ -13,7 +13,7 @@ public class PerformanceAuditTransformer implements ClassFileTransformer {
     @Override
     public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
         String dotClassName = className.replace('/', '.');
-        if (!dotClassName.contains("com.example.jvm")) {
+        if (!dotClassName.contains("net.piotrl.jvm")) {
             return null;
         }
         System.out.println("Loaded: " + dotClassName);
