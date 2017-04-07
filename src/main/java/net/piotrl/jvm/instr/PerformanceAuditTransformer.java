@@ -43,7 +43,8 @@ public class PerformanceAuditTransformer implements ClassFileTransformer {
 
         method.insertBefore("elapsedTime = System.currentTimeMillis();");
         method.insertAfter(" { elapsedTime = System.currentTimeMillis() - elapsedTime; "
-                + "System.out.println(\"\\n [AUDIT][" + name + "] Method elapsedTime = \" + elapsedTime + \"\\n\");}"
+                + "System.out.println(\"\\n [AUDIT][ARGS] \" + $1.params());"
+                + "System.out.println(\" [AUDIT][" + name + "] Method elapsedTime = \" + elapsedTime + \"\\n\");}"
         );
     }
 }
