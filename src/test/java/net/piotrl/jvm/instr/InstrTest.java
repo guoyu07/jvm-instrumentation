@@ -25,7 +25,7 @@ public class InstrTest {
 
 	@Test
 	public void agentSlowWithAnnotation() throws IOException {
-		System.out.println("agentSlowTestWithPerformanceAnnotation");
+		System.out.println("agentSlowWithAnnotation");
 		new URL("http://localhost:4567/param/Joe").openStream();
 
 		assertTrue(true);
@@ -33,7 +33,7 @@ public class InstrTest {
 
 	@Test
 	public void agentFastWithAnnotation() throws IOException {
-		System.out.println("agentSlowTestWithPerformanceAnnotation");
+		System.out.println("agentFastWithAnnotation");
 		new URL("http://localhost:4567/param/fastparam").openStream();
 
 		assertTrue(true);
@@ -41,7 +41,7 @@ public class InstrTest {
 
 	@Test
 	public void agentWithoutAnnotation() throws IOException {
-		System.out.println("agentTestWithoutPerformanceAnnotation");
+		System.out.println("agentWithoutAnnotation");
 		new URL("http://localhost:4567/hello").openStream();
 
 		assertTrue(true);

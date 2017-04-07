@@ -23,24 +23,24 @@ public class InstrIT {
 	}
 
 	@Test
-	public void agentSlowWithPerformanceAnnotation() throws IOException {
-		System.out.println("agentSlowTestWithPerformanceAnnotation");
+	public void agentSlowWithAnnotation() throws IOException {
+		System.out.println("agentSlowWithAnnotation");
 		new URL("http://localhost:4567/param/Joe").openStream();;
 
 		assertTrue(true);
 	}
 
 	@Test
-	public void agentFastWithPerformanceAnnotation() throws IOException {
-		System.out.println("agentSlowTestWithPerformanceAnnotation");
+	public void agentFastWithAnnotation() throws IOException {
+		System.out.println("agentFastWithAnnotation");
 		new URL("http://localhost:4567/param/fastparam").openStream();;
 
 		assertTrue(true);
 	}
 
 	@Test
-	public void agentTestWithoutPerformanceAnnotation() throws IOException {
-		System.out.println("agentTestWithoutPerformanceAnnotation");
+	public void agentWithoutAnnotation() throws IOException {
+		System.out.println("agentWithoutAnnotation");
 		new URL("http://localhost:4567/hello").openStream();
 
 		assertTrue(true);

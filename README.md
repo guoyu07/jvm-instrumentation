@@ -20,25 +20,26 @@ During unit test, you shouldn't see any `[AUDIT]` output in console.
 #### Unit tests
 
 ```
-agentTestWithoutPerformanceAnnotation
-agentSlowTestWithPerformanceAnnotation
-agentSlowTestWithPerformanceAnnotation
+agentWithoutAnnotation
+agentSlowWithAnnotation
+agentFastWithAnnotation
 
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.26 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.07 sec```
 ```
 
 #### Integration tests
+
 ```
-agentTestWithoutPerformanceAnnotation
-agentSlowTestWithPerformanceAnnotation
+agentWithoutAnnotation
+agentSlowWithAnnotation
 
  [AUDIT][ARGS] {:name=Joe}
  [AUDIT][getJoe] Method elapsedTime = 1000
 
-agentSlowTestWithPerformanceAnnotation
+agentFastWithAnnotation
 
  [AUDIT][ARGS] {:name=fastparam}
  [AUDIT][getJoe] Method elapsedTime = 0
- 
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.056 sec - in net.piotrl.jvm.instr.InstrIT
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.992 sec - in net.piotrl.jvm.instr.InstrIT
 ```
